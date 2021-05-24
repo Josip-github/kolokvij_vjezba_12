@@ -106,6 +106,9 @@ update decko set asocijalno = false;
 #U tablici prijatelj obrišite sve zapise čija je vrijednost kolone asocijalno false.
 delete from prijatelj where asocijalno = false;
 
+#Izlistajte vesta iz tablice svekrva uz uvjet da vrijednost kolone kuna nije 8,13,20,28 ili 35.
+select vesta 
+from svekrva where kuna not in(8,13,20,28,35);
 
 
 
