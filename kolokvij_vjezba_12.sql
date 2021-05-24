@@ -70,3 +70,14 @@ create table prijatelj(
 	modelnaocala varchar(38),
 	djevojka int
 );
+
+alter table decko add foreign key (zena) references zena(sifra);
+
+alter table svekrva add foreign key (zarucnica) references zarucnica(sifra);
+
+alter table djevojka add foreign key (svekrva) references svekrva(sifra);
+
+alter table prijatelj add foreign key (djevojka) references djevojka(sifra);
+
+alter table zarucnica_sestra add foreign key (zarucnica) references zarucnica(sifra);
+alter table zarucnica_sestra add foreign key (sestra) references sestra(sifra);
