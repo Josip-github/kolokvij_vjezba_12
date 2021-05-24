@@ -103,6 +103,8 @@ values('sunčane','s kapuljačom','adidas','duga','zelena',12,1),
 #U tablici decko postavite svim zapisima kolonu asocijalno na vrijednost false.
 update decko set asocijalno = false;
 
+#U tablici prijatelj obrišite sve zapise čija je vrijednost kolone asocijalno false.
+delete from prijatelj where asocijalno = false;
 
 
 
