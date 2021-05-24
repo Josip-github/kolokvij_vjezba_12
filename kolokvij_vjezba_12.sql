@@ -126,6 +126,10 @@ inner join prijatelj p on p.djevojka = d.sifra
 where s2.kuna > 87 and z.kratkamajica like '%ba%'
 order by d.vesta desc;
 
+#Prikažite kolone kratkamajica i jmbag iz tablice zarucnica čiji se primarni ključ ne nalaze u tablici zarucnica_sestra.
+select z.kratkamajica , z.jmbag 
+from zarucnica z inner join zarucnica_sestra zs on zs.zarucnica = z.sifra 
+where zs.zarucnica is null;
 
 
 
