@@ -110,6 +110,21 @@ delete from prijatelj where asocijalno = false;
 select vesta 
 from svekrva where kuna not in(8,13,20,28,35);
 
+/*Prikažite kratkamajica iz tablice sestra, kuna iz tablice prijatelj te
+vesta iz tablice djevojka uz uvjet da su vrijednosti kolone kuna iz
+tablice svekrva veće od 87 te da su vrijednosti kolone kratkamajica iz
+tablice zarucnica sadrže niz znakova ba. Podatke posložite po vesta iz
+tablice djevojka silazno.*/
+
+#sestra, prijatelj, djevojka. svekrva, zarucnica
+select s.kratkamajica , p.kuna , d.vesta 
+from sestra s inner join zarucnica_sestra zs on s.sifra = zs.sestra 
+inner join zarucnica z on z.sifra = zs.zarucnica 
+inner join svekrva s2 on s2.zarucnica = z.sifra 
+inner join djevojka d on d.svekrva = s2.sifra 
+inner join prijatelj p on p.djevojka = d.sifra 
+where s2.kuna > 87 and z.kratkamajica like '%ba%'
+order by d.vesta desc;
 
 
 
