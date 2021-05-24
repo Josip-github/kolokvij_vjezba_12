@@ -128,7 +128,7 @@ order by d.vesta desc;
 
 #Prikažite kolone kratkamajica i jmbag iz tablice zarucnica čiji se primarni ključ ne nalaze u tablici zarucnica_sestra.
 select z.kratkamajica , z.jmbag 
-from zarucnica z inner join zarucnica_sestra zs on zs.zarucnica = z.sifra 
+from zarucnica z left join zarucnica_sestra zs on z.sifra = zs.zarucnica 
 where zs.zarucnica is null;
 
 
