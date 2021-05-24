@@ -100,6 +100,8 @@ values('sunčane','s kapuljačom','adidas','duga','zelena',12,1),
 ('za čitanje','zimska','nike','kratka','crna',11,2),
 ('rayban','proljetna','puma','uska','smeđa',32,3);
 
+#U tablici decko postavite svim zapisima kolonu asocijalno na vrijednost false.
+update decko set asocijalno = false;
 
 
 
