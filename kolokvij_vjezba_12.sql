@@ -81,3 +81,34 @@ alter table prijatelj add foreign key (djevojka) references djevojka(sifra);
 
 alter table zarucnica_sestra add foreign key (zarucnica) references zarucnica(sifra);
 alter table zarucnica_sestra add foreign key (sestra) references sestra(sifra);
+
+#U tablice djevojka, svekrva i zarucnica_sestra unesite po 3 retka.
+insert into zarucnica(hlace,kratkamajica)
+values('traper','ljetna'),('sportske','kratkih rukava'),('uske','adidas');
+
+insert into sestra(kratkamajica)
+values('ljetna'),('adidas'),('reebok');
+
+insert into zarucnica_sestra (zarucnica,sestra)
+values(1,1),(3,3),(2,2);
+
+insert into svekrva(asocijalno)
+values(0),(0),(0);
+
+insert into djevojka(modelnaocala,vesta,kratkamajica,suknja,bojaociju,prstena,svekrva)
+values('sunčane','s kapuljačom','adidas','duga','zelena',12,1),
+('za čitanje','zimska','nike','kratka','crna',11,2),
+('rayban','proljetna','puma','uska','smeđa',32,3);
+
+
+
+
+
+
+
+
+
+
+
+
+
